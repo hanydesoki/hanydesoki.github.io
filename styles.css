@@ -563,10 +563,6 @@ html, body {
     #email-address {
         display: none;
     }
-    #home-profile-name::before {
-        top: 0;
-        left: -20px;
-    }
 
     @media screen and (max-height: 770px) {
         #home-navigation {
@@ -599,6 +595,10 @@ html, body {
         flex-direction: column;
         gap: 0;
     }
+    #home-profile-name::before {
+        top: 0;
+        left: -20px;
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -606,6 +606,13 @@ html, body {
         min-height: 100px;
     }
 }
+
+@media screen and (max-width: 550px) {
+    .experience-card img {
+        display: none!important;
+    }
+}
+
 
 @media screen and (max-width: 500px) {
     .experience-card.closed .experience-card-locdate{
@@ -619,13 +626,12 @@ html, body {
     .experience-card.closed .experience-card-position {
         font-size: 1rem;
     }
-}
 
-@media screen and (max-width: 500px) {
     .nav-opt {
         font-size: 0.8rem;
     }
 }
+
 
 @media screen and (max-width: 400px) {
     #home-profile-name::before {
