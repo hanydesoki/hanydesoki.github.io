@@ -226,7 +226,8 @@ html, body {
     
 }
 
-#home-profile-greeting {
+#home-profile-name::before {
+    content: "Hi! I'm";
     font-size: 1.4rem;
     font-weight: bold;
     background-color: #00b478 ;
@@ -237,6 +238,10 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    left: 0;
+    top: -40px;
+
 }
 
 #home-profile-name {
@@ -246,6 +251,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative
 }
 
 #home-profile-lastname {
@@ -543,9 +549,15 @@ html, body {
     transition: width ease 0.4s;
 }
 
+/* ---------------- RESPONSIVENESS ************************/
+
 @media screen and (max-width: 850px) {
     #email-address {
         display: none;
+    }
+    #home-profile-name::before {
+        top: 0;
+        left: -20px;
     }
 }
 
@@ -576,3 +588,55 @@ html, body {
         min-height: 100px;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .experience-card.closed .experience-card-locdate{
+        display: none;
+    }
+
+    .experience-card.closed .experience-card-summary {
+        font-size: 0.8rem;
+    }
+
+    .experience-card.closed .experience-card-position {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav-opt {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #home-profile-name::before {
+        left: 0;
+        font-size: 1rem;
+        width: 70px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-height: 770px) {
+    #home-navigation {
+        gap: 0;
+    }
+    .home-navigation-opt {
+        font-size: 1rem;
+        padding: 6px;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    #home-profile-name {
+        font-size: 2rem;
+    }
+    #home-profile-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* @media screen and (max-height: 550px) {
+    
+} */
