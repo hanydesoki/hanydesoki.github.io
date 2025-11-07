@@ -337,12 +337,16 @@ html, body {
 }
 
 .scrollable-page-list {
-    width: 100%;
+    width: 90%;
     height: 100%;
 
     display: flex;
     flex-direction: column;
     overflow: auto;
+}
+
+.scrollable-page-list::-webkit-scrollbar {
+    display: none;
 }
 
 /* ------------ SKILLS --------------- */
@@ -371,6 +375,10 @@ html, body {
     }
     margin-bottom: 12px;
     
+}
+
+.skill-card:last-child, .experience-card:last-child  {
+    margin-bottom: 45px;
 }
 
 
@@ -559,6 +567,16 @@ html, body {
         top: 0;
         left: -20px;
     }
+
+    @media screen and (max-height: 770px) {
+        #home-navigation {
+            gap: 0;
+        }
+        .home-navigation-opt {
+            font-size: 1rem;
+            padding: 6px;
+        }
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -618,15 +636,6 @@ html, body {
     }
 }
 
-@media screen and (max-height: 770px) {
-    #home-navigation {
-        gap: 0;
-    }
-    .home-navigation-opt {
-        font-size: 1rem;
-        padding: 6px;
-    }
-}
 
 @media screen and (max-height: 700px) {
     #home-profile-name {
